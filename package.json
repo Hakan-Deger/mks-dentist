@@ -1,7 +1,7 @@
 {
-  "name": "cilesiz-karsit-dental",
+  "name": "mks-dentist",
   "version": "1.0.0",
-  "description": "Dental Clinic Website with Backend",
+  "description": "Özel MKS Ağız ve Diş Sağlığı Polikliniği Web Sitesi",
   "engines": {
     "node": "20.14.0"
   },

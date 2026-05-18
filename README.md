@@ -1,72 +1,64 @@
-# Çilesiz & Karşıt Diş Muayenehanesi — Web Sitesi
+# Özel MKS Ağız ve Diş Sağlığı Polikliniği — Web Sitesi
 
-Sivas'ta hizmet veren **Çilesiz & Karşıt Diş Muayenehanesi** için hazırlanmış, tek dosyadan oluşan modern ve tam responsive klinik web sitesi.
+Ankara Keçiören Ovacık'ta hizmet veren **Özel MKS Ağız ve Diş Sağlığı Polikliniği** için tasarlanmış; modern, şık (Altın ve Bej tonlarında), SEO uyumlu ve tam responsive klinik web sitesi projesi.
 
 ## 🦷 Özellikler
 
-- **Tek HTML dosyası** — harici kütüphane yok, build adımı yok
-- **Tüm CSS** `<style>` bloğunda, **tüm JS** `<script>` bloğunda
-- **Google Fonts**: DM Serif Display + Inter
-- **Animasyon sistemi**: `IntersectionObserver` tabanlı scroll reveal, CSS keyframe hero animasyonları
-- **Tamamen responsive** — masaüstü, tablet ve mobil uyumlu
-- **Hamburger menü** — mobil için slide-in overlay menü
-- **Count-up sayaç** — 3.000+ mutlu hasta animasyonlu sayım
-- **Hizmetler bölümü** — hover'da fotoğraf değişimi (10 hizmet)
-- **Randevu formu** — doğrulama + başarı mesajı
-- **Ekip slider'ı** — ← → buton navigasyonu
+- **Lüks Altın & Bej Tasarım** — Polikliniğin kurumsal kimliğine ve logosuna özel olarak uyarlanmış renk paleti.
+- **Node.js & SQLite Backend** — Blog yazıları ve vaka analizlerini (öncesi/sonrası resimleri) dinamik olarak yöneten güçlü altyapı.
+- **Tam SEO Uyumluluğu** — Yapılandırılmış Schema.org JSON-LD verileri, robots.txt, sitemap.xml, canonical linkler ve Open Graph meta etiketleri.
+- **Modern Arayüz Detayları** — Dönen kurumsal "MKS" rozeti, pürüzsüz animasyonlar (`IntersectionObserver` reveal) ve interaktif hover geçişleri.
+- **WhatsApp Entegrasyonu** — Doğrudan randevu alımını kolaylaştıran hızlı yönlendirmeler.
+- **Tamamen Responsive** — Mobil, tablet ve masaüstü cihazlar için piksel hassasiyetinde mobil uyum.
 
 ## 📁 Proje Yapısı
 
 ```
-cilesiz-karsit-dental/
-├── index.html          # Ana HTML dosyası
+mks-dentist/
+├── index.html            # Ana sayfa (Hero, Rozet, Hakkımızda, Sayaç, Randevu)
+├── html/
+│   ├── hakkimizda.html   # Hakkımızda sayfası (Yeni klinik vizyonu)
+│   ├── tedaviler.html    # Tedaviler ve hizmetlerimiz sayfası
+│   ├── ekibimiz.html     # Uzman hekim kadromuz sayfası
+│   └── iletisim.html     # İletişim sayfası (Çalışma saatleri ve harita)
 ├── css/
-│   └── style.css       # Tüm stiller (reset, layout, bileşenler, responsive)
+│   └── style.css         # Tüm sitenin stil kuralları (Lüks bej-altın değişkenleri)
 ├── js/
-│   └── main.js         # Tüm JavaScript (navbar, slider, form, animasyonlar)
-├── assets/
-│   └── hero-dentist.png  # Ana sayfa hero görseli
-├── README.md           # Bu dosya
-└── .gitignore          # Git dışı tutulacak dosyalar
+│   └── main.js           # Mobil menü, animasyonlar ve slider JavaScript kodları
+├── backend/
+│   ├── server.js         # Node.js sunucu dosyası
+│   ├── database.js       # SQLite veritabanı bağlantısı
+│   └── data/
+│       └── clinic.db     # Dinamik veritabanı (Blog ve Vaka Analizleri)
+├── robots.txt            # SEO Arama motoru yönlendirmeleri
+├── sitemap.xml           # SEO Site haritası
+└── README.md             # Bu dosya
 ```
 
 ## 🏥 Klinik Bilgileri
 
 | Bilgi | Detay |
 |---|---|
-| **Klinik** | Çilesiz & Karşıt Diş Muayenehanesi |
-| **Telefon** | 0501 648 83 58 |
-| **Adres** | Eskikale Mah. 13/3. Sokak, Elagöz İş Merkezi, Kat:1 No:2, Sivas/Merkez |
-| **Konum** | Hoca İmam Camii Karşısı |
-| **Pzt–Cmt** | 09:00 – 20:00 |
-| **Pazar** | 12:00 – 18:00 |
+| **Poliklinik Adı** | Özel MKS Ağız ve Diş Sağlığı Polikliniği |
+| **Telefon** | 0 533 575 23 77 |
+| **Adres** | Ovacık Mahallesi, 550.cadde, No:9/a Vip Tower Bulvar, Keçiören/Ankara |
+| **Çalışma Saatleri** | Her Gün: 09:00 – 00:00 |
+| **E-posta** | info@mkspoliklinik.com |
+| **Sosyal Medya** | [Instagram @mkspoliklinik](https://www.instagram.com/mkspoliklinik/) |
 
-## 🔧 Kullanım
+## 🔧 Kurulum ve Çalıştırma
 
-1. `index.html` dosyasını tarayıcıda çift tıklayarak açın
-2. Herhangi bir kurulum veya sunucu gerekmez
+### 1. Backend Sunucusunu Başlatma
+Dinamik blog ve vaka yönetimi için backend sunucusunu ayağa kaldırın:
+```bash
+cd backend
+npm install
+npm run dev
+```
 
-## 🚀 GitHub Pages ile Yayınlama
-
-1. Bu repoyu GitHub'a push edin
-2. Repo ayarlarında **Settings → Pages** bölümüne gidin
-3. **Branch:** `main`, **Folder:** `/ (root)` seçin
-4. Kaydedin — siteniz `https://kullaniciadiniz.github.io/repo-adi` adresinde yayında olacak
-
-## 📸 Görseller Hakkında
-
-Şu anda tüm görseller Unsplash'tan alınmaktadır. Gerçek klinik fotoğraflarını kullanmak için:
-
-- Fotoğrafları `assets/` klasörüne yükleyin
-- `index.html` içindeki Unsplash URL'lerini yerel yollarla değiştirin (`assets/foto.jpg` gibi)
-
-## ✏️ İçerik Güncellemesi
-
-- **Doktor adları/fotoğrafları** → HTML'de `#team` bölümü
-- **Telefon/adres** → Footer ve `#appointment` bölümü  
-- **Çalışma saatleri** → Footer `.footer-hours` bölümü
-- **Hizmetler** → `#services` bölümü `.services-list`
+### 2. Arayüzü İnceleme
+Ana dizindeki `index.html` dosyasını tarayıcınızda açabilir veya yerel bir sunucu (Live Server vb.) aracılığıyla çalıştırabilirsiniz.
 
 ---
 
-*Çilesiz & Karşıt Diş Muayenehanesi © 2025*
+*Özel MKS Ağız ve Diş Sağlığı Polikliniği © 2026 — Tüm Hakları Saklıdır.*
