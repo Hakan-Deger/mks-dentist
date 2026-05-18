@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sayfa Bulunamadı — MKS</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #1A2B6B;
+      --blue: #2D5EE0;
+      --ice: #F0F4FF;
+      --text: #4A5568;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--ice);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      color: var(--navy);
+    }
+    .container {
+      max-width: 500px;
+      padding: 40px;
+      background: white;
+      border-radius: 32px;
+      box-shadow: 0 20px 60px rgba(26, 43, 107, 0.1);
+    }
+    .error-code {
+      font-family: 'DM Serif Display', serif;
+      font-size: 120px;
+      line-height: 1;
+      margin: 0;
+      background: linear-gradient(135deg, var(--navy), var(--blue));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 28px;
+      margin: 20px 0 10px;
+    }
+    p {
+      color: var(--text);
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      background: var(--blue);
+      color: white;
+      text-decoration: none;
+      padding: 14px 28px;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(45, 94, 224, 0.2);
+    }
+    .btn-icon {
+      margin-left: 8px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="error-code">404</div>
+    <h1>Aradığınız sayfa kaybolmuş olabilir</h1>
+    <p>Üzgünüz, aradığınız sayfa taşınmış veya silinmiş olabilir. Ana sayfamıza dönerek gülüşünüz için doğru adımı atabilirsiniz.</p>
+    <a href="/" class="btn">
+      Ana Sayfaya Dön
+      <span class="btn-icon">↗</span>
+    </a>
+  </div>
+</body>
+</html>

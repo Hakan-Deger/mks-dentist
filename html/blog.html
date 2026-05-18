@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Blog — Özel MKS Ağız ve Diş Sağlığı Polikliniği</title>
+<meta name="description" content="Diş sağlığı, implantlar, gülüş tasarımı ve ağız bakımı hakkında güncel bilgiler içeren blog yazılarımız."/>
+
+<!-- Canonical -->
+<link rel="canonical" href="https://mkspoliklinik.com/blog" />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://mkspoliklinik.com/blog" />
+<meta property="og:title" content="Blog — Özel MKS Ağız ve Diş Sağlığı Polikliniği" />
+<meta property="og:description" content="Diş sağlığı ve tedavileri hakkında uzman hekimlerimizden bilgilendirici içerikler." />
+<meta property="og:image" content="https://mkspoliklinik.com/assets/og-image.jpg" />
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content="https://mkspoliklinik.com/blog" />
+<meta property="twitter:title" content="Blog — Özel MKS Ağız ve Diş Sağlığı Polikliniği" />
+<meta property="twitter:description" content="Diş sağlığı ve tedavileri hakkında uzman hekimlerimizden bilgilendirici içerikler." />
+<meta property="twitter:image" content="https://mkspoliklinik.com/assets/og-image.jpg" />
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/css/style.css"/>
+<style>
+  .blog-page-grid {
+    max-width: 1200px; margin: 0 auto; padding: 100px 32px;
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;
+  }
+</style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <div class="nav-logo-icon">🦷</div>
+      <span class="nav-logo-text">MKS</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Ana Sayfa</a></li>
+      <li><a href="/hakkimizda">Hakkımızda</a></li>
+      <li><a href="/tedaviler">Tedaviler</a></li>
+      <li><a href="/ekibimiz">Ekibimiz</a></li>
+      <li><a href="/iletisim">İletişim</a></li>
+    </ul>
+    <a href="https://wa.me/905335752377" target="_blank" class="nav-cta">
+      <span class="nav-cta-label">Randevu Al</span>
+      <div class="nav-cta-circle">↗</div>
+    </a>
+  </div>
+</nav>
+
+<div class="page-banner">
+  <div class="page-banner-inner">
+    <span class="section-label"># DİŞ SAĞLIĞI</span>
+    <h1 class="page-banner-title">Kliniğimizden <span>bilgiler</span></h1>
+  </div>
+  <div class="page-banner-deco"></div>
+</div>
+
+<div class="blog-page-grid" id="blogList">
+  <p style="grid-column: 1/-1; text-align: center; color: var(--muted);">Yazılar yükleniyor...</p>
+</div>
+
+<footer id="footer">
+  <div class="footer-inner" style="text-align:center; padding-bottom:40px;">
+    <a href="/" style="color:var(--navy); font-weight:bold; text-decoration:none;">Ana Sayfaya Dön</a>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', async () => {
+    try {
+      const res = await fetch('http://localhost:3001/api/blog');
+      const data = await res.json();
+      const grid = document.getElementById('blogList');
+      grid.innerHTML = '';
+      
+      if (!data.posts || data.posts.length === 0) {
+        grid.innerHTML = '<p style="grid-column: 1/-1; text-align: center; color: var(--muted);">Henüz yazı bulunmuyor.</p>';
+        return;
+      }
+
+      data.posts.forEach(post => {
+        const date = new Date(post.created_at).toLocaleDateString('tr-TR', { month: 'long', year: 'numeric' });
+        let img = post.cover_image || 'https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=400&q=85';
+        if(img && img.startsWith('/')) img = 'http://localhost:3001' + img;
+        
+        grid.innerHTML += `
+          <article class="blog-card" style="cursor:pointer; opacity:1; transform:none;" onclick="window.location.href='/blog-detay?slug=${post.slug}'">
+            <img class="blog-thumb" src="${img}" alt="${post.title}" />
+            <div class="blog-content">
+              <span class="blog-date">${date}</span>
+              <h3 class="blog-card-title">${post.title}</h3>
+              <p class="blog-excerpt">${post.excerpt}</p>
+              <div class="blog-arrow-btn">↗</div>
+            </div>
+          </article>
+        `;
+      });
+    } catch (err) {
+      console.error(err);
+      document.getElementById('blogList').innerHTML = '<p>Bloglar yüklenirken bir hata oluştu.</p>';
+    }
+  });
+</script>
+</body>
+</html>
+
+
+
+

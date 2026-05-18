@@ -1,0 +1,20 @@
+{
+  "name": "cilesiz-karsit-dental",
+  "version": "1.0.0",
+  "description": "Dental Clinic Website with Backend",
+  "engines": {
+    "node": "20.14.0"
+  },
+  "scripts": {
+    "start": "node backend/server.js",
+    "build": "npm install"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "cors": "^2.8.5",
+    "multer": "^1.4.5-lts.1",
+    "sqlite": "^5.1.1",
+    "sqlite3": "5.1.7",
+    "slugify": "^1.6.9"
+  }
+}

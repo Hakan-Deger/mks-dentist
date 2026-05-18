@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>İletişim & Randevu — Özel MKS Ağız ve Diş Sağlığı Polikliniği</title>
+<meta name="description" content="Özel MKS Ağız ve Diş Sağlığı Polikliniği ile iletişime geçin, online randevu alın. Adres: Eskikale Mah., Ankara."/>
+
+<!-- Canonical -->
+<link rel="canonical" href="https://mkspoliklinik.com/iletisim" />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://mkspoliklinik.com/iletisim" />
+<meta property="og:title" content="İletişim & Randevu — Özel MKS Ağız ve Diş Sağlığı Polikliniği" />
+<meta property="og:description" content="Keçiören, Ankara'deki kliniğimiz için online randevu alın veya bizimle iletişime geçin." />
+<meta property="og:image" content="https://mkspoliklinik.com/assets/og-image.jpg" />
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content="https://mkspoliklinik.com/iletisim" />
+<meta property="twitter:title" content="İletişim & Randevu — Özel MKS Ağız ve Diş Sağlığı Polikliniği" />
+<meta property="twitter:description" content="Keçiören, Ankara'deki kliniğimiz için online randevu alın veya bizimle iletişime geçin." />
+<meta property="twitter:image" content="https://mkspoliklinik.com/assets/og-image.jpg" />
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/css/style.css"/>
+<style>
+/* İletişim sayfası özel stiller */
+.contact-grid{
+  max-width:1200px;margin:0 auto;padding:100px 32px;
+  display:grid;grid-template-columns:1fr 420px;gap:80px;align-items:start
+}
+.contact-info{display:flex;flex-direction:column;gap:32px}
+.contact-info-title{font-family:'DM Serif Display',serif;font-size:clamp(28px,3.5vw,42px);color:var(--navy);line-height:1.12}
+.contact-cards{display:flex;flex-direction:column;gap:16px}
+.contact-card{
+  background:var(--white);border-radius:var(--r-card);padding:22px 24px;
+  display:flex;align-items:flex-start;gap:16px;
+  box-shadow:var(--sh);border:1px solid rgba(30,27,24,.06)
+}
+.contact-card-icon{
+  width:44px;height:44px;border-radius:50%;background:var(--ice);flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;font-size:18px
+}
+.contact-card-body{display:flex;flex-direction:column;gap:4px}
+.contact-card-label{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.contact-card-value{font-size:15px;font-weight:600;color:var(--navy);text-decoration:none;line-height:1.45}
+.contact-card-value:hover{color:var(--blue)}
+.contact-card-sub{font-size:13px;color:var(--muted)}
+.hours-table{display:flex;flex-direction:column;gap:8px;margin-top:4px}
+.hours-row{display:flex;justify-content:space-between;font-size:14px;color:var(--text);padding-bottom:8px;border-bottom:1px solid rgba(30,27,24,.07)}
+.hours-row:last-child{border-bottom:none;padding-bottom:0}
+.hours-day{font-weight:500;color:var(--navy)}
+.hours-time{color:var(--muted)}
+/* Form kartı */
+.contact-form-card{
+  background:var(--white);border-radius:var(--r-big);padding:40px 36px;
+  box-shadow:var(--sh-lg);border:1px solid rgba(30,27,24,.06);
+  position:sticky;top:100px
+}
+.contact-form-title{font-family:'DM Serif Display',serif;font-size:24px;color:var(--navy);margin-bottom:28px;line-height:1.2}
+/* Harita */
+.map-wrap{
+  max-width:1200px;margin:0 auto 100px;padding:0 32px
+}
+.map-embed{
+  width:100%;height:380px;border-radius:var(--r-big);overflow:hidden;
+  box-shadow:var(--sh);border:1px solid rgba(30,27,24,.08)
+}
+.map-embed iframe{width:100%;height:100%;border:none;display:block}
+@media(max-width:900px){
+  .contact-grid{grid-template-columns:1fr;gap:48px;padding:72px 20px}
+  .contact-form-card{position:static;padding:28px 22px}
+  .map-wrap{padding:0 20px;margin-bottom:72px}
+  .map-embed{height:280px}
+}
+</style>
+</head>
+<body>
+
+<!-- ── NAVBAR ──────────────────────────────────────── -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <div class="nav-logo-icon">🦷</div>
+      <span class="nav-logo-text">MKS</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Ana Sayfa</a></li>
+      <li><a href="/hakkimizda">Hakkımızda</a></li>
+      <li><a href="/tedaviler">Tedaviler</a></li>
+      <li><a href="/ekibimiz">Ekibimiz</a></li>
+      <li><a href="/iletisim" class="active">İletişim</a></li>
+    </ul>
+    <a href="https://wa.me/905335752377" class="nav-cta" target="_blank">
+      <span class="nav-cta-label">Randevu Al</span>
+      <div class="nav-cta-circle">↗</div>
+    </a>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menüyü aç/kapat" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav-mobile-overlay" id="mobileOverlay"></div>
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="/">Ana Sayfa</a>
+  <a href="/hakkimizda">Hakkımızda</a>
+  <a href="/tedaviler">Tedaviler</a>
+  <a href="/ekibimiz">Ekibimiz</a>
+  <a href="/iletisim" class="active">İletişim</a>
+  <div class="nav-mobile-divider"></div>
+  <a href="https://wa.me/905335752377" class="nav-mobile-cta" target="_blank">
+    <span>Randevu Al</span>
+    <div class="nav-mobile-cta-icon">↗</div>
+  </a>
+</div>
+
+<!-- ── PAGE BANNER ─────────────────────────────────── -->
+<div class="page-banner">
+  <div class="page-banner-inner">
+    <span class="section-label"># İLETİŞİM & RANDEVU</span>
+    <h1 class="page-banner-title">Bize ulaşın,<br><span>randevunuzu alın</span></h1>
+    <p class="page-banner-sub">Formu doldurun veya bizi arayın — uzmanlarımız en kısa sürede sizinle iletişime geçsin.</p>
+  </div>
+  <div class="page-banner-deco"></div>
+  <div class="page-banner-deco2"></div>
+</div>
+
+<!-- ── CONTACT GRID ──────────────────────────────────── -->
+<div class="contact-grid">
+
+  <!-- Sol — iletişim bilgileri -->
+  <div class="contact-info reveal from-left">
+    <h2 class="contact-info-title">Kliniğimize hoş geldiniz</h2>
+    <div class="contact-cards">
+
+      <div class="contact-card">
+        <div class="contact-card-icon">📍</div>
+        <div class="contact-card-body">
+          <span class="contact-card-label">Adres</span>
+          <span class="contact-card-value">Ovacık Mahallesi, 550.cadde<br>No:9/a Vip Tower Bulvar</span>
+          <span class="contact-card-sub">Keçiören/Ankara</span>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-card-icon">📞</div>
+        <div class="contact-card-body">
+          <span class="contact-card-label">Telefon</span>
+          <a href="tel:+905335752377" class="contact-card-value">0 533 575 23 77</a>
+          <span class="contact-card-sub">Aramak için tıklayın</span>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-card-icon">✉️</div>
+        <div class="contact-card-body">
+          <span class="contact-card-label">E-posta</span>
+          <a href="mailto:info@mkspoliklinik.com" class="contact-card-value">info@mkspoliklinik.com</a>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-card-icon">🕐</div>
+        <div class="contact-card-body" style="width:100%">
+          <span class="contact-card-label">Çalışma Saatleri</span>
+          <div class="hours-table">
+            <div class="hours-row">
+              <span class="hours-day">Pazartesi – Pazar</span>
+              <span class="hours-time">09:00 – 00:00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Sağ — randevu formu -->
+  <div class="contact-form-card reveal from-right">
+    <p class="contact-form-title">Randevu Formu</p>
+    <form class="appt-form" id="apptForm" novalidate style="grid-template-columns:1fr">
+      <div class="appt-field full">
+        <label class="appt-label" for="apptName">Ad Soyad</label>
+        <input class="appt-input" id="apptName" type="text" placeholder="Örn: Ahmet Yılmaz"/>
+      </div>
+      <div class="appt-field full">
+        <label class="appt-label" for="apptPhone">Telefon</label>
+        <input class="appt-input" id="apptPhone" type="tel" placeholder="05XX XXX XX XX"/>
+      </div>
+      <div class="appt-field full">
+        <label class="appt-label" for="apptEmail">E-posta</label>
+        <input class="appt-input" id="apptEmail" type="email" placeholder="ornek@mail.com"/>
+      </div>
+      <div class="appt-field full">
+        <label class="appt-label" for="apptDate">Randevu Tarihi</label>
+        <input class="appt-input" id="apptDate" type="date"/>
+      </div>
+      <div class="appt-field full">
+        <label class="appt-label" for="apptTime">Tercih Ettiğiniz Saat</label>
+        <input class="appt-input" id="apptTime" type="time"/>
+      </div>
+      <div class="appt-field full">
+        <label class="appt-label" for="apptNote">Notunuz (isteğe bağlı)</label>
+        <textarea class="appt-textarea" id="apptNote" placeholder="Tedavi veya şikayetinizle ilgili kısa bir not bırakabilirsiniz."></textarea>
+      </div>
+      <div class="appt-submit-row">
+        <div class="appt-success" id="apptSuccess">
+          ✅ Randevunuz alındı! En kısa sürede sizi arayacağız.
+        </div>
+        <button type="submit" class="btn-cta" style="border:none;cursor:pointer;width:100%;justify-content:center">
+          Randevumu Onayla <div class="btn-cta-circle">↗</div>
+        </button>
+      </div>
+    </form>
+  </div>
+
+</div>
+
+<!-- ── HARİTA ────────────────────────────────────────── -->
+<div class="map-wrap">
+  <div class="map-embed">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3072.4!2d37.0154!3d39.7477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMznCsDQ0JzUxLjciTiAzN8KwMDAnNTUuNCJF!5e0!3m2!1str!2str!4v1"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="Özel MKS Ağız ve Diş Sağlığı Polikliniği Konumu"
+    ></iframe>
+  </div>
+</div>
+
+<!-- ── FOOTER ─────────────────────────────────────────── -->
+<footer id="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-col-brand">
+        <a href="/" class="footer-logo">
+          <div class="footer-logo-icon">🦷</div>
+          <span class="footer-logo-text">MKS</span>
+        </a>
+        <p class="footer-address">Ovacık Mahallesi, 550.cadde,
+            No:9/a Vip Tower Bulvar<br>Keçiören/Ankara</p>
+        <p class="footer-copy-inline">© 2025, <strong>MKS.</strong><br>Tüm Hakları Saklıdır.</p>
+      </div>
+      <div class="footer-col-card">
+        <div class="footer-info-card">
+          <p class="footer-info-desc">Uzman diş hekimliği, kolayca randevu alarak hizmetinizdeyiz.</p>
+          <div class="footer-info-divider"></div>
+          <a href="tel:+905335752377" class="footer-info-phone">0 533 575 23 77</a>
+          <a href="mailto:info@mkspoliklinik.com" class="footer-info-email">info@mkspoliklinik.com</a>
+        </div>
+      </div>
+      <div class="footer-col-links">
+        <p class="footer-col-heading">Hızlı Bağlantılar</p>
+        <div class="footer-links-cols">
+          <div class="footer-links-col">
+            <a href="/" class="footer-link">Ana Sayfa</a>
+            <a href="/hakkimizda" class="footer-link">Hakkımızda</a>
+            <a href="https://wa.me/905335752377" class="footer-link" target="_blank">Randevu Al</a>
+          </div>
+          <div class="footer-links-col">
+            <a href="/tedaviler" class="footer-link">Tedaviler</a>
+            <a href="/ekibimiz" class="footer-link">Ekibimiz</a>
+            <a href="/iletisim" class="footer-link">İletişim</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-col-newsletter">
+        <p class="footer-col-heading">Sosyal Medya</p>
+        <div class="footer-social-row">
+          <a href="https://wa.me/905335752377" class="footer-social-btn footer-social-btn--wa" aria-label="WhatsApp" target="_blank" rel="noopener">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.529 5.854L0 24l6.323-1.496A11.933 11.933 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.014-1.376l-.36-.214-3.732.883.933-3.617-.235-.372A9.818 9.818 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182c5.43 0 9.818 4.388 9.818 9.818 0 5.43-4.388 9.818-9.818 9.818z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/mkspoliklinik" class="footer-social-btn footer-social-btn--ig" aria-label="Instagram" target="_blank" rel="noopener">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/main.js"></script>
+</body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,264 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Klinik Admin Paneli</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root { --blue: #2D5EE0; --navy: #1A2B6B; --bg: #F5F7FA; }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: system-ui, sans-serif; }
+    body { background: var(--bg); display: flex; height: 100vh; }
+    .sidebar { width: 250px; background: var(--navy); color: white; padding: 20px; }
+    .sidebar h2 { margin-bottom: 30px; font-size: 1.2rem; }
+    .sidebar a { display: block; color: white; text-decoration: none; padding: 12px; border-radius: 6px; margin-bottom: 8px; }
+    .sidebar a:hover, .sidebar a.active { background: rgba(255,255,255,0.1); }
+    .content { flex: 1; padding: 40px; overflow-y: auto; }
+    .card { background: white; padding: 24px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); margin-bottom: 24px; }
+    h1 { color: var(--navy); margin-bottom: 24px; }
+    .form-group { margin-bottom: 16px; }
+    label { display: block; margin-bottom: 6px; font-weight: 500; color: #333; }
+    input[type="text"], input[type="file"], select, textarea { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; }
+    textarea { height: 120px; resize: vertical; }
+    button { background: var(--blue); color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-weight: 500; }
+    button:hover { background: var(--navy); }
+    .table-container { width: 100%; overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { padding: 12px; text-align: left; border-bottom: 1px solid #eee; }
+    th { color: var(--navy); }
+    .btn-sm { padding: 6px 12px; font-size: 0.85rem; }
+    .btn-danger { background: #e74c3c; }
+    .btn-danger:hover { background: #c0392b; }
+    .toast { position: fixed; bottom: 20px; right: 20px; background: #2ecc71; color: white; padding: 12px 24px; border-radius: 6px; display: none; }
+  </style>
+</head>
+<body>
+
+  <div class="sidebar">
+    <h2>Klinik Yönetimi</h2>
+    <a href="#" class="active" onclick="showTab('blog')">Blog Yazıları</a>
+    <a href="#" onclick="showTab('cases')">Öncesi / Sonrası</a>
+    <a href="/" target="_blank" style="margin-top:auto">Siteyi Görüntüle ↗</a>
+  </div>
+
+  <div class="content">
+    <div id="toast" class="toast">İşlem başarılı!</div>
+
+    <!-- BLOG BÖLÜMÜ -->
+    <div id="tab-blog">
+      <h1>Blog Yönetimi</h1>
+      <div class="card">
+        <h3 style="margin-bottom:16px" id="blogFormTitle">Yeni Yazı Ekle</h3>
+        <form id="blogForm" onsubmit="saveBlog(event)">
+          <input type="hidden" id="blogId">
+          <div class="form-group">
+            <label>Başlık</label>
+            <input type="text" id="blogTitle" required>
+          </div>
+          <div class="form-group">
+            <label>Kategori</label>
+            <select id="blogCategory">
+              <option value="Genel">Genel</option>
+              <option value="İmplant">İmplant</option>
+              <option value="Estetik">Estetik</option>
+              <option value="Protetik">Protetik</option>
+              <option value="Çocuk Diş">Çocuk Diş</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Kısa Özet</label>
+            <textarea id="blogExcerpt" style="height:60px"></textarea>
+          </div>
+          <div class="form-group">
+            <label>İçerik (HTML destekler)</label>
+            <textarea id="blogContent" required></textarea>
+          </div>
+          <div class="form-group">
+            <label>Kapak Görseli</label>
+            <input type="file" id="blogCover" accept="image/*">
+          </div>
+          <button type="submit">Kaydet</button>
+          <button type="button" onclick="resetBlogForm()" style="background:#888; margin-left:8px">İptal</button>
+        </form>
+      </div>
+      
+      <div class="card table-container">
+        <table>
+          <thead>
+            <tr><th>Tarih</th><th>Kapak</th><th>Başlık</th><th>Kategori</th><th>İşlemler</th></tr>
+          </thead>
+          <tbody id="blogTableBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- BEFORE/AFTER BÖLÜMÜ -->
+    <div id="tab-cases" style="display:none">
+      <h1>Öncesi / Sonrası Vakalar</h1>
+      <div class="card">
+        <h3 style="margin-bottom:16px" id="caseFormTitle">Yeni Vaka Ekle</h3>
+        <form id="caseForm" onsubmit="saveCase(event)">
+          <input type="hidden" id="caseId">
+          <div class="form-group">
+            <label>Hasta Adı (Opsiyonel)</label>
+            <input type="text" id="casePatient">
+          </div>
+          <div class="form-group">
+            <label>Tedavi Türü</label>
+            <select id="caseTreatment">
+              <option value="Diş Beyazlatma">Diş Beyazlatma</option>
+              <option value="Zirkonyum">Zirkonyum</option>
+              <option value="Ortodonti">Ortodonti</option>
+              <option value="İmplant">İmplant</option>
+              <option value="Gülüş Tasarımı">Gülüş Tasarımı</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Açıklama</label>
+            <textarea id="caseDesc" style="height:80px"></textarea>
+          </div>
+          <div style="display:flex; gap:16px">
+            <div class="form-group" style="flex:1">
+              <label>Öncesi Görseli</label>
+              <input type="file" id="caseBefore" accept="image/*" required>
+            </div>
+            <div class="form-group" style="flex:1">
+              <label>Sonrası Görseli</label>
+              <input type="file" id="caseAfter" accept="image/*" required>
+            </div>
+          </div>
+          <button type="submit">Kaydet</button>
+          <button type="button" onclick="resetCaseForm()" style="background:#888; margin-left:8px">İptal</button>
+        </form>
+      </div>
+
+      <div class="card table-container">
+        <table>
+          <thead>
+            <tr><th>Hasta</th><th>Tedavi</th><th>Öncesi</th><th>Sonrası</th><th>İşlemler</th></tr>
+          </thead>
+          <tbody id="caseTableBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const API = '/api';
+
+    function showToast(msg) {
+      const el = document.getElementById('toast');
+      el.textContent = msg;
+      el.style.display = 'block';
+      setTimeout(() => el.style.display = 'none', 3000);
+    }
+
+    function showTab(tab) {
+      document.getElementById('tab-blog').style.display = tab === 'blog' ? 'block' : 'none';
+      document.getElementById('tab-cases').style.display = tab === 'cases' ? 'block' : 'none';
+      document.querySelectorAll('.sidebar a').forEach(a => a.classList.remove('active'));
+      event.target.classList.add('active');
+      if (tab === 'blog') loadBlogs();
+      if (tab === 'cases') loadCases();
+    }
+
+    // ── BLOG İŞLEMLERİ ──
+    async function loadBlogs() {
+      const res = await fetch(`${API}/blog/all`);
+      const posts = await res.json();
+      const tbody = document.getElementById('blogTableBody');
+      tbody.innerHTML = '';
+      posts.forEach(p => {
+        const img = p.cover_image ? `<img src="${p.cover_image}" width="50" style="border-radius:4px">` : '-';
+        const date = new Date(p.created_at).toLocaleDateString('tr-TR');
+        tbody.innerHTML += `
+          <tr>
+            <td>${date}</td>
+            <td>${img}</td>
+            <td>${p.title}</td>
+            <td>${p.category}</td>
+            <td>
+              <button class="btn-sm btn-danger" onclick="deleteBlog(${p.id})">Sil</button>
+            </td>
+          </tr>
+        `;
+      });
+    }
+
+    async function saveBlog(e) {
+      e.preventDefault();
+      const fd = new FormData();
+      fd.append('title', document.getElementById('blogTitle').value);
+      fd.append('category', document.getElementById('blogCategory').value);
+      fd.append('excerpt', document.getElementById('blogExcerpt').value);
+      fd.append('content', document.getElementById('blogContent').value);
+      
+      const file = document.getElementById('blogCover').files[0];
+      if (file) fd.append('cover_image', file);
+
+      const res = await fetch(`${API}/blog`, { method: 'POST', body: fd });
+      if (res.ok) { showToast('Yazı eklendi'); resetBlogForm(); loadBlogs(); }
+      else alert('Hata oluştu');
+    }
+
+    async function deleteBlog(id) {
+      if (!confirm('Emin misiniz?')) return;
+      await fetch(`${API}/blog/${id}`, { method: 'DELETE' });
+      loadBlogs();
+    }
+
+    function resetBlogForm() {
+      document.getElementById('blogForm').reset();
+    }
+
+    // ── CASES İŞLEMLERİ ──
+    async function loadCases() {
+      const res = await fetch(`${API}/cases/all`);
+      const cases = await res.json();
+      const tbody = document.getElementById('caseTableBody');
+      tbody.innerHTML = '';
+      cases.forEach(c => {
+        tbody.innerHTML += `
+          <tr>
+            <td>${c.patient_name}</td>
+            <td>${c.treatment}</td>
+            <td><img src="${c.before_img}" width="60" style="border-radius:4px"></td>
+            <td><img src="${c.after_img}" width="60" style="border-radius:4px"></td>
+            <td><button class="btn-sm btn-danger" onclick="deleteCase(${c.id})">Sil</button></td>
+          </tr>
+        `;
+      });
+    }
+
+    async function saveCase(e) {
+      e.preventDefault();
+      const fd = new FormData();
+      fd.append('patient_name', document.getElementById('casePatient').value);
+      fd.append('treatment', document.getElementById('caseTreatment').value);
+      fd.append('description', document.getElementById('caseDesc').value);
+      
+      const fileB = document.getElementById('caseBefore').files[0];
+      const fileA = document.getElementById('caseAfter').files[0];
+      if (fileB) fd.append('before_img', fileB);
+      if (fileA) fd.append('after_img', fileA);
+
+      const res = await fetch(`${API}/cases`, { method: 'POST', body: fd });
+      if (res.ok) { showToast('Vaka eklendi'); resetCaseForm(); loadCases(); }
+      else alert('Hata oluştu');
+    }
+
+    async function deleteCase(id) {
+      if (!confirm('Emin misiniz?')) return;
+      await fetch(`${API}/cases/${id}`, { method: 'DELETE' });
+      loadCases();
+    }
+
+    function resetCaseForm() {
+      document.getElementById('caseForm').reset();
+    }
+
+    // Başlangıç
+    loadBlogs();
+  </script>
+</body>
+</html>
+

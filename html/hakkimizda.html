@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Hakkımızda — Özel MKS Ağız ve Diş Sağlığı Polikliniği</title>
+<meta name="description" content="Özel MKS Ağız ve Diş Sağlığı Polikliniği hakkında bilgi edinin. Ankara'da uzman diş hekimleri ve modern ekipmanlarla hizmetinizdeyiz."/>
+
+<!-- Canonical -->
+<link rel="canonical" href="https://mkspoliklinik.com/hakkimizda" />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://mkspoliklinik.com/hakkimizda" />
+<meta property="og:title" content="Hakkımızda — Özel MKS Ağız ve Diş Sağlığı Polikliniği" />
+<meta property="og:description" content="Ankara'da uzman diş hekimleri ve modern ekipmanlarla hizmetinizdeyiz. MKS hikayemizi dinleyin." />
+<meta property="og:image" content="https://mkspoliklinik.com/assets/og-image.jpg" />
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content="https://mkspoliklinik.com/hakkimizda" />
+<meta property="twitter:title" content="Hakkımızda — Özel MKS Ağız ve Diş Sağlığı Polikliniği" />
+<meta property="twitter:description" content="Ankara'da uzman diş hekimleri ve modern ekipmanlarla hizmetinizdeyiz. MKS hikayemizi dinleyin." />
+<meta property="twitter:image" content="https://mkspoliklinik.com/assets/og-image.jpg" />
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/css/style.css"/>
+<style>
+
+/* ── ABOUT HERO ─────────────────────────────────────── */
+.ab-hero{
+  background:linear-gradient(to bottom,#ffffff 0%,#FAF5F0 40%,#F5EBE1 100%);
+  padding:140px 32px 0;
+  text-align:center;
+  position:relative
+}
+.ab-hero-label{
+  display:inline-flex;align-items:center;
+  border:1.5px solid rgba(30,27,24,.25);border-radius:50px;
+  padding:5px 18px;font-weight:600;font-size:11px;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--navy);
+  margin-bottom:28px
+}
+.ab-hero-title{
+  font-family:'DM Serif Display',serif;
+  font-size:clamp(38px,5.5vw,72px);color:var(--navy);line-height:1.1;
+  max-width:760px;margin:0 auto 0
+}
+.ab-hero-title span{font-style:italic;color:var(--blue)}
+.ab-hero-photo-wrap{
+  position:relative;max-width:1100px;margin:56px auto 0;
+  display:grid;grid-template-columns:1fr 340px;gap:0;align-items:flex-end
+}
+.ab-hero-img{
+  width:100%;height:480px;object-fit:cover;object-position:top center;
+  border-radius:var(--r-big) var(--r-big) 0 0;display:block
+}
+.ab-mission-card{
+  background:var(--white);border-radius:var(--r-big);
+  padding:36px 32px;
+  box-shadow:0 12px 48px rgba(30,27,24,.13);
+  border:1px solid rgba(30,27,24,.06);
+  align-self:center;
+  margin-left:-40px;margin-bottom:60px;
+  position:relative;z-index:2
+}
+.ab-mission-icon{
+  width:44px;height:44px;background:var(--ice);border-radius:var(--r-sm);
+  display:flex;align-items:center;justify-content:center;
+  font-size:20px;margin-bottom:18px
+}
+.ab-mission-title{font-family:'DM Serif Display',serif;font-size:20px;color:var(--navy);margin-bottom:12px}
+.ab-mission-text{font-size:14px;color:var(--text);line-height:1.75}
+
+/* ── JOURNEY ────────────────────────────────────────── */
+.ab-journey{background:var(--bg);padding:100px 32px}
+.ab-journey-inner{max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:72px}
+.ab-journey-top{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.ab-journey-top-title{
+  font-family:'DM Serif Display',serif;
+  font-size:clamp(30px,4vw,52px);color:var(--navy);line-height:1.1
+}
+.ab-journey-top-text{font-size:15px;color:var(--text);line-height:1.8;padding-top:8px}
+.ab-journey-bottom{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+
+/* Fotoğraf — gradient arka plan */
+.ab-photo-bg{
+  background:linear-gradient(135deg,#F5EBE1 0%,#E8D8C3 100%);
+  border-radius:var(--r-big);padding:32px 32px 0;
+  overflow:hidden;display:flex;align-items:flex-end;min-height:460px
+}
+.ab-photo-bg img{
+  width:100%;max-height:420px;object-fit:cover;
+  object-position:top center;border-radius:var(--r-card) var(--r-card) 0 0;display:block
+}
+
+/* İçerik sağ */
+.ab-tech-content{display:flex;flex-direction:column;gap:20px}
+.ab-tech-title{
+  font-family:'DM Serif Display',serif;
+  font-size:clamp(26px,3.5vw,44px);color:var(--navy);line-height:1.12
+}
+.ab-tech-text{font-size:15px;color:var(--text);line-height:1.75}
+.ab-checklist{display:flex;flex-direction:column;gap:14px;margin-top:8px}
+.ab-check-item{display:flex;align-items:center;gap:12px;font-size:15px;color:var(--navy);font-weight:500}
+.ab-check-icon{
+  width:26px;height:26px;border-radius:50%;
+  background:rgba(212,175,55,.1);flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+  color:var(--blue);font-size:13px;font-weight:700
+}
+
+/* ── TEAM ───────────────────────────────────────────── */
+.ab-team{background:var(--white);padding:100px 32px}
+.ab-team-inner{max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:56px}
+.ab-team-header{text-align:center;display:flex;flex-direction:column;align-items:center;gap:16px}
+.ab-team-title{font-family:'DM Serif Display',serif;font-size:clamp(30px,4vw,52px);color:var(--navy);line-height:1.1;max-width:560px}
+.ab-team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.ab-team-card{display:flex;flex-direction:column;gap:14px}
+.ab-team-photo{
+  width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top;
+  border-radius:var(--r-big);display:block;
+  background:var(--ice)
+}
+.ab-team-name{font-weight:700;font-size:16px;color:var(--navy)}
+.ab-team-role{font-size:14px;color:var(--muted);font-weight:400}
+
+/* ── CTA ────────────────────────────────────────────── */
+.ab-cta{background:var(--bg);padding:100px 32px}
+.ab-cta-inner{
+  max-width:1200px;margin:0 auto;
+  display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center
+}
+.ab-cta-photo-wrap{
+  background:linear-gradient(135deg,#F5EBE1 0%,#E8D8C3 100%);
+  border-radius:var(--r-big);padding:32px 40px 0;
+  overflow:hidden;display:flex;justify-content:center;align-items:flex-end;min-height:460px
+}
+.ab-cta-photo-wrap img{
+  width:85%;max-height:420px;object-fit:cover;object-position:top;
+  border-radius:var(--r-card) var(--r-card) 0 0;display:block
+}
+.ab-cta-content{display:flex;flex-direction:column;gap:24px}
+.ab-cta-title{font-family:'DM Serif Display',serif;font-size:clamp(28px,4vw,52px);color:var(--navy);line-height:1.1}
+.ab-cta-title span{font-style:italic;color:var(--blue)}
+.ab-cta-text{font-size:15px;color:var(--text);line-height:1.75}
+.ab-cta-phone{
+  display:flex;align-items:center;gap:16px;
+  background:var(--white);border-radius:var(--r-big);
+  padding:16px 20px;box-shadow:var(--sh);border:1px solid rgba(30,27,24,.06);
+  width:fit-content
+}
+.ab-cta-phone-icon{
+  width:44px;height:44px;border-radius:50%;background:var(--ice);
+  display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0
+}
+.ab-cta-phone-label{font-size:12px;color:var(--muted);font-weight:500}
+.ab-cta-phone-num{font-size:18px;font-weight:700;color:var(--navy);text-decoration:none;display:block}
+.ab-cta-phone-num:hover{color:var(--blue)}
+
+/* ── RESPONSIVE ─────────────────────────────────────── */
+@media(max-width:1024px){
+  .ab-hero-photo-wrap{grid-template-columns:1fr;max-width:700px}
+  .ab-mission-card{margin-left:0;margin-bottom:0;margin-top:24px}
+  .ab-hero-img{height:380px}
+}
+@media(max-width:900px){
+  .ab-hero{padding:110px 20px 0}
+  .ab-journey{padding:72px 20px}
+  .ab-team{padding:72px 20px}
+  .ab-cta{padding:72px 20px}
+  .ab-journey-top,.ab-journey-bottom,.ab-cta-inner{grid-template-columns:1fr;gap:40px}
+  .ab-team-grid{grid-template-columns:repeat(2,1fr)}
+  .ab-photo-bg,.ab-cta-photo-wrap{min-height:340px}
+}
+@media(max-width:560px){
+  .ab-team-grid{grid-template-columns:repeat(2,1fr);gap:16px}
+  .ab-hero-img{height:260px}
+}
+</style>
+</head>
+<body>
+
+<!-- ── NAVBAR ──────────────────────────────────────── -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <div class="nav-logo-icon">🦷</div>
+      <span class="nav-logo-text">MKS</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Ana Sayfa</a></li>
+      <li><a href="/hakkimizda" class="active">Hakkımızda</a></li>
+      <li><a href="/tedaviler">Tedaviler</a></li>
+      <li><a href="/ekibimiz">Ekibimiz</a></li>
+      <li><a href="/iletisim">İletişim</a></li>
+    </ul>
+    <a href="https://wa.me/905335752377" class="nav-cta" target="_blank">
+      <span class="nav-cta-label">Randevu Al</span>
+      <div class="nav-cta-circle">↗</div>
+    </a>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menüyü aç/kapat" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav-mobile-overlay" id="mobileOverlay"></div>
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="/">Ana Sayfa</a>
+  <a href="/hakkimizda" class="active">Hakkımızda</a>
+  <a href="/tedaviler">Tedaviler</a>
+  <a href="/ekibimiz">Ekibimiz</a>
+  <a href="/iletisim">İletişim</a>
+  <div class="nav-mobile-divider"></div>
+  <a href="https://wa.me/905335752377" class="nav-mobile-cta" target="_blank">
+    <span>Randevu Al</span>
+    <div class="nav-mobile-cta-icon">↗</div>
+  </a>
+</div>
+
+<!-- ── ABOUT HERO ────────────────────────────────────── -->
+<section class="ab-hero">
+  <span class="ab-hero-label"># HAKKIMIZDA</span>
+  <h1 class="ab-hero-title">
+    Gülüşünüze ve<br>sağlığınıza adanmış<br>
+    <span>güvenilir klinik</span>
+  </h1>
+
+  <div class="ab-hero-photo-wrap">
+    <img
+      class="ab-hero-img"
+      src="../assets/klinik-ekibi.png"
+      alt="Klinik ekibi"
+    />
+    <div class="ab-mission-card reveal from-right">
+      <div class="ab-mission-icon">👑</div>
+      <p class="ab-mission-title">Misyonumuz &amp; Vizyonumuz</p>
+      <p class="ab-mission-text">MKS olarak her hastaya kişiselleştirilmiş, şefkatli diş bakımı sunmayı amaçlıyoruz. Hedefimiz; güvene, saygıya ve mükemmeliyete dayalı uzun süreli ilişkiler kurarak sağlıklı, özgüvenli gülüşler yaratmaktır.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── JOURNEY ───────────────────────────────────────── -->
+<section class="ab-journey">
+  <div class="ab-journey-inner">
+
+    <!-- Üst: başlık + metin -->
+    <div class="ab-journey-top reveal from-bottom">
+      <h2 class="ab-journey-top-title">Yolculuğumuz ve bakıma adanmışlığımız</h2>
+      <p class="ab-journey-top-text">Özel MKS Ağız ve Diş Sağlığı Polikliniği, yenilikçi ve kaliteli diş hekimliği hizmetlerini sizlerle buluşturmak amacıyla Ankara'da kapılarını açtı. En modern teknolojiler ve güncel tedavi yaklaşımlarıyla donatılmış yeni ve ferah kliniğimizde, deneyimli uzman hekim kadromuzla yanınızdayız. Amacımız, her ziyareti konforlu, kişisel ve güvenilir kılarak Ankara'da ağız ve diş sağlığı alanında yeni bir standart belirlemektir.</p>
+    </div>
+
+    <!-- Alt: fotoğraf + içerik -->
+    <div class="ab-journey-bottom">
+      <div class="ab-photo-bg reveal from-left">
+        <img
+          src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=800&q=85"
+          alt="Ankara MKS Kliniği Modern Diş Hekimliği Teknolojisi"
+          loading="lazy"
+        />
+      </div>
+      <div class="ab-tech-content reveal from-right">
+        <span class="section-label"># KLİNİĞİMİZ HAKKINDA</span>
+        <h2 class="ab-tech-title">Modern ortamda yenilikçi araçlar</h2>
+        <p class="ab-tech-text">Doğru tanı, etkili tedavi ve ağrısız deneyim için kliniğimiz en son teknolojik gelişmelerle donatılmıştır.</p>
+        <div class="ab-checklist">
+          <div class="ab-check-item">
+            <div class="ab-check-icon">✓</div>
+            Dijital Röntgen Sistemi
+          </div>
+          <div class="ab-check-item">
+            <div class="ab-check-icon">✓</div>
+            3D Görüntüleme &amp; Tarama
+          </div>
+          <div class="ab-check-item">
+            <div class="ab-check-icon">✓</div>
+            Lazer Diş Hekimliği
+          </div>
+          <div class="ab-check-item">
+            <div class="ab-check-icon">✓</div>
+            CAD/CAM Protez Teknolojisi
+          </div>
+          <div class="ab-check-item">
+            <div class="ab-check-icon">✓</div>
+            Steril &amp; Güvenli Klinik Ortamı
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── TEAM ──────────────────────────────────────────── -->
+<section class="ab-team">
+  <div class="ab-team-inner">
+    <div class="ab-team-header reveal from-bottom">
+      <span class="section-label"># EKİBİMİZ</span>
+      <h2 class="ab-team-title">Güvenilir diş hekimlerinizle tanışın</h2>
+    </div>
+    <div class="ab-team-grid" style="grid-template-columns: 1fr 1fr; gap: 28px; max-width: 800px; margin: 0 auto;">
+      <div class="ab-team-card reveal from-bottom" data-rev-delay="0" style="background:var(--white); padding:32px; border-radius:var(--r-big); box-shadow:0 8px 32px rgba(30,27,24,.06); border:1px solid rgba(30,27,24,.05);">
+        <div>
+          <p class="ab-team-name" style="font-size:22px; margin-bottom:8px;">Uzman Hekimlerimiz</p>
+          <p class="ab-team-role" style="font-size:15px;">Diş Hekimi — İmplant Uzmanı</p>
+        </div>
+      </div>
+      <div class="ab-team-card reveal from-bottom" data-rev-delay="100" style="background:var(--white); padding:32px; border-radius:var(--r-big); box-shadow:0 8px 32px rgba(30,27,24,.06); border:1px solid rgba(30,27,24,.05);">
+        <div>
+          <p class="ab-team-name" style="font-size:22px; margin-bottom:8px;">Deneyimli Kadromuz</p>
+          <p class="ab-team-role" style="font-size:15px;">Diş Hekimi — Ortodonti Uzmanı</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ───────────────────────────────────────────── -->
+<section class="ab-cta">
+  <div class="ab-cta-inner">
+    <div class="ab-cta-photo-wrap reveal from-left">
+      <img
+        src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=800&q=85"
+        alt="Ankara Uzman Diş Hekimi Muayenesi"
+        loading="lazy"
+      />
+    </div>
+    <div class="ab-cta-content reveal from-right">
+      <h2 class="ab-cta-title">Gülüşünüzü<br>dönüştürmeye<br><span>hazır mısınız?</span></h2>
+      <p class="ab-cta-text">Beklemeden gülüşünüze gereken ilgiyi gösterin. Bugün randevunuzu alın, size özel tasarlanmış kişiselleştirilmiş diş bakımı deneyimi yaşayın.</p>
+      <div class="ab-cta-phone">
+        <div class="ab-cta-phone-icon">📞</div>
+        <div>
+          <span class="ab-cta-phone-label">Bizi Arayın</span>
+          <a href="tel:+905335752377" class="ab-cta-phone-num">0 533 575 23 77</a>
+        </div>
+      </div>
+      <a href="/iletisim" class="btn-cta" style="align-self:flex-start">
+        Randevu Al <div class="btn-cta-circle">↗</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ─────────────────────────────────────────── -->
+<footer id="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+
+      <!-- Col 1: Logo + Adres -->
+      <div class="footer-col-brand">
+        <a href="/" class="footer-logo">
+          <div class="footer-logo-icon">🦷</div>
+          <span class="footer-logo-text">MKS</span>
+        </a>
+        <p class="footer-address">
+          Ovacık Mahallesi, 550.cadde,
+            No:9/a Vip Tower Bulvar<br>
+          Keçiören/Ankara
+        </p>
+        <p class="footer-copy-inline">© 2025, <strong>MKS.</strong><br>Tüm Hakları Saklıdır.</p>
+      </div>
+
+      <!-- Col 2: Bilgi Kartı -->
+      <div class="footer-col-card">
+        <div class="footer-info-card">
+          <p class="footer-info-desc">Uzman diş hekimliği, kolayca randevu alarak hizmetinizdeyiz.</p>
+          <div class="footer-info-divider"></div>
+          <a href="tel:+905335752377" class="footer-info-phone">0 533 575 23 77</a>
+          <a href="mailto:info@mkspoliklinik.com" class="footer-info-email">info@mkspoliklinik.com</a>
+        </div>
+      </div>
+
+      <!-- Col 3: Hızlı Bağlantılar -->
+      <div class="footer-col-links">
+        <p class="footer-col-heading">Hızlı Bağlantılar</p>
+        <div class="footer-links-cols">
+          <div class="footer-links-col">
+            <a href="/" class="footer-link">Ana Sayfa</a>
+            <a href="/hakkimizda" class="footer-link">Hakkımızda</a>
+            <a href="https://wa.me/905335752377" class="footer-link" target="_blank">Randevu Al</a>
+          </div>
+          <div class="footer-links-col">
+            <a href="/tedaviler" class="footer-link">Tedaviler</a>
+            <a href="/ekibimiz" class="footer-link">Ekibimiz</a>
+            <a href="/iletisim" class="footer-link">İletişim</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Col 4: Sosyal Medya -->
+      <div class="footer-col-newsletter">
+        <p class="footer-col-heading">Sosyal Medya</p>
+        <div class="footer-social-row">
+          <a href="https://wa.me/905335752377" class="footer-social-btn footer-social-btn--wa" aria-label="WhatsApp" target="_blank" rel="noopener">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.529 5.854L0 24l6.323-1.496A11.933 11.933 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.014-1.376l-.36-.214-3.732.883.933-3.617-.235-.372A9.818 9.818 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182c5.43 0 9.818 4.388 9.818 9.818 0 5.43-4.388 9.818-9.818 9.818z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/mkspoliklinik" class="footer-social-btn footer-social-btn--ig" aria-label="Instagram" target="_blank" rel="noopener">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+<script src="/js/main.js"></script>
+</body>
+</html>
+
+
+
+
+
+

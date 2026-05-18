@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Blog Detay — MKS</title>
+<meta name="description" content="Özel MKS Ağız ve Diş Sağlığı Polikliniği blog yazısı detayları."/>
+
+<!-- Canonical -->
+<link rel="canonical" href="https://mkspoliklinik.com/blog-detay" />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Blog Detay — MKS" />
+<meta property="og:description" content="Diş sağlığı ve tedavileri hakkında bilgilendirici makale." />
+<meta property="og:image" content="https://mkspoliklinik.com/assets/og-image.jpg" />
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:title" content="Blog Detay — MKS" />
+<meta property="twitter:description" content="Diş sağlığı ve tedavileri hakkında bilgilendirici makale." />
+<meta property="twitter:image" content="https://mkspoliklinik.com/assets/og-image.jpg" />
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/css/style.css"/>
+<style>
+  .blog-detail-container { max-width: 800px; margin: 120px auto 60px; padding: 0 20px; }
+  .blog-detail-img { width: 100%; height: 400px; object-fit: cover; border-radius: 16px; margin-bottom: 32px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+  .blog-detail-title { font-family: 'DM Serif Display', serif; font-size: clamp(32px, 5vw, 48px); color: var(--navy); margin-bottom: 16px; line-height: 1.1; }
+  .blog-detail-meta { color: var(--muted); font-size: 14px; margin-bottom: 32px; font-weight: 500; }
+  .blog-detail-content { font-size: 16px; line-height: 1.8; color: var(--text); }
+  .blog-detail-content h2, .blog-detail-content h3 { color: var(--navy); margin: 32px 0 16px; font-family: 'DM Serif Display', serif; }
+  .blog-detail-content p { margin-bottom: 16px; }
+  .back-link { display: inline-flex; align-items: center; gap: 8px; color: var(--blue); text-decoration: none; font-weight: 600; margin-bottom: 32px; }
+  .back-link:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <div class="nav-logo-icon">🦷</div>
+      <span class="nav-logo-text">MKS</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Ana Sayfa</a></li>
+      <li><a href="/hakkimizda">Hakkımızda</a></li>
+      <li><a href="/tedaviler">Tedaviler</a></li>
+      <li><a href="/ekibimiz">Ekibimiz</a></li>
+      <li><a href="/iletisim">İletişim</a></li>
+    </ul>
+    <a href="https://wa.me/905335752377" target="_blank" class="nav-cta">
+      <span class="nav-cta-label">Randevu Al</span>
+      <div class="nav-cta-circle">↗</div>
+    </a>
+  </div>
+</nav>
+
+<div class="blog-detail-container" id="detailContainer">
+  <p>İçerik yükleniyor...</p>
+</div>
+
+<footer id="footer">
+  <div class="footer-inner" style="text-align:center; padding-bottom:40px;">
+    <p class="footer-copy-inline">© 2026, <strong>MKS.</strong></p>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', async () => {
+    const params = new URLSearchParams(window.location.search);
+    const slug = params.get('slug');
+    const container = document.getElementById('detailContainer');
+
+    if (!slug) {
+      container.innerHTML = '<p>Yazı bulunamadı.</p><a href="/blog" class="back-link">← Bloglara Dön</a>';
+      return;
+    }
+
+    try {
+      const res = await fetch(`http://localhost:3001/api/blog/${slug}`);
+      if (!res.ok) throw new Error('Not found');
+      const post = await res.json();
+
+      const date = new Date(post.created_at).toLocaleDateString('tr-TR', { month: 'long', year: 'numeric', day: 'numeric' });
+      let img = post.cover_image || 'https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=800&q=85';
+      if(img && img.startsWith('/')) img = 'http://localhost:3001' + img;
+
+      document.title = `${post.title} — MKS`;
+
+      container.innerHTML = `
+        <a href="/blog" class="back-link">← Bloglara Dön</a>
+        <img class="blog-detail-img" src="${img}" alt="${post.title}">
+        <h1 class="blog-detail-title">${post.title}</h1>
+        <div class="blog-detail-meta">${date} • ${post.category || 'Genel'}</div>
+        <div class="blog-detail-content">
+          ${post.content}
+        </div>
+      `;
+    } catch (err) {
+      console.error(err);
+      container.innerHTML = '<p>Yazı yüklenirken hata oluştu.</p><a href="/blog" class="back-link">← Bloglara Dön</a>';
+    }
+  });
+</script>
+</body>
+</html>
+
+
+
+

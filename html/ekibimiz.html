@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Ekibimiz — Özel MKS Ağız ve Diş Sağlığı Polikliniği</title>
+<meta name="description" content="Özel MKS Ağız ve Diş Sağlığı Polikliniği uzman diş hekimleri ve klinik ekibiyle tanışın."/>
+
+<!-- Canonical -->
+<link rel="canonical" href="https://mkspoliklinik.com/ekibimiz" />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://mkspoliklinik.com/ekibimiz" />
+<meta property="og:title" content="Ekibimiz — Özel MKS Ağız ve Diş Sağlığı Polikliniği" />
+<meta property="og:description" content="Ankara'ın deneyimli diş hekimleri Uzman Hekimlerimiz ve Deneyimli Kadromuz ile tanışın." />
+<meta property="og:image" content="https://mkspoliklinik.com/assets/og-image.jpg" />
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content="https://mkspoliklinik.com/ekibimiz" />
+<meta property="twitter:title" content="Ekibimiz — Özel MKS Ağız ve Diş Sağlığı Polikliniği" />
+<meta property="twitter:description" content="Ankara'ın deneyimli diş hekimleri Uzman Hekimlerimiz ve Deneyimli Kadromuz ile tanışın." />
+<meta property="twitter:image" content="https://mkspoliklinik.com/assets/og-image.jpg" />
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/css/style.css"/>
+<style>
+/* Ekibimiz sayfası — grid görünümü */
+.team-page-grid{
+  max-width:1200px;margin:0 auto;padding:100px 32px;
+  display:grid;grid-template-columns:repeat(4,1fr);gap:28px
+}
+.team-page-card{
+  background:var(--white);border-radius:var(--r-big);
+  overflow:hidden;box-shadow:var(--sh);
+  transition:transform .25s cubic-bezier(.22,1,.36,1),box-shadow .25s
+}
+.team-page-card:hover{transform:translateY(-6px);box-shadow:var(--sh-lg)}
+.team-page-card img{width:100%;height:300px;object-fit:cover;object-position:top;display:block}
+.team-page-info{padding:22px 24px 28px;display:flex;flex-direction:column;gap:6px}
+.team-page-name{font-family:'DM Serif Display',serif;font-size:18px;color:var(--navy)}
+.team-page-role{font-size:13px;color:var(--muted);font-weight:500}
+.team-page-bio{font-size:13px;color:var(--text);line-height:1.65;margin-top:8px}
+@media(max-width:1024px){.team-page-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){
+  .team-page-grid{grid-template-columns:1fr;padding:72px 20px}
+  .team-page-card img{height:260px}
+}
+</style>
+</head>
+<body>
+
+<!-- ── NAVBAR ──────────────────────────────────────── -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <div class="nav-logo-icon">🦷</div>
+      <span class="nav-logo-text">MKS</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Ana Sayfa</a></li>
+      <li><a href="/hakkimizda">Hakkımızda</a></li>
+      <li><a href="/tedaviler">Tedaviler</a></li>
+      <li><a href="/ekibimiz" class="active">Ekibimiz</a></li>
+      <li><a href="/iletisim">İletişim</a></li>
+    </ul>
+    <a href="https://wa.me/905335752377" class="nav-cta" target="_blank">
+      <span class="nav-cta-label">Randevu Al</span>
+      <div class="nav-cta-circle">↗</div>
+    </a>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menüyü aç/kapat" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav-mobile-overlay" id="mobileOverlay"></div>
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="/">Ana Sayfa</a>
+  <a href="/hakkimizda">Hakkımızda</a>
+  <a href="/tedaviler">Tedaviler</a>
+  <a href="/ekibimiz" class="active">Ekibimiz</a>
+  <a href="/iletisim">İletişim</a>
+  <div class="nav-mobile-divider"></div>
+  <a href="https://wa.me/905335752377" class="nav-mobile-cta" target="_blank">
+    <span>Randevu Al</span>
+    <div class="nav-mobile-cta-icon">↗</div>
+  </a>
+</div>
+
+<!-- ── PAGE BANNER ─────────────────────────────────── -->
+<div class="page-banner">
+  <div class="page-banner-inner">
+    <span class="section-label"># EKİBİMİZ</span>
+    <h1 class="page-banner-title">Güvenilir diş hekimleriyle<br><span>tanışın</span></h1>
+    <p class="page-banner-sub">Alanında uzman, deneyimli hekimlerimiz ve klinik ekibimiz her zaman yanınızda.</p>
+  </div>
+  <div class="page-banner-deco"></div>
+  <div class="page-banner-deco2"></div>
+</div>
+
+<!-- ── TEAM GRID ─────────────────────────────────────── -->
+<div class="team-page-grid" style="grid-template-columns: 1fr 1fr; max-width: 900px; margin: 0 auto;">
+  <div class="team-page-card reveal from-bottom" data-rev-delay="0" style="padding:40px;">
+    <div class="team-page-info" style="padding:0; gap:12px;">
+      <p class="team-page-name" style="font-size:26px;">Uzman Hekimlerimiz</p>
+      <p class="team-page-role" style="font-size:16px;">Diş Hekimi — İmplant Uzmanı</p>
+      <p class="team-page-bio" style="font-size:15px;">İmplant ve cerrahi tedavilerde 10+ yıl deneyim. Her hastaya özel tedavi planıyla güvenli sonuçlar sunar.</p>
+    </div>
+  </div>
+  <div class="team-page-card reveal from-bottom" data-rev-delay="100" style="padding:40px;">
+    <div class="team-page-info" style="padding:0; gap:12px;">
+      <p class="team-page-name" style="font-size:26px;">Deneyimli Kadromuz</p>
+      <p class="team-page-role" style="font-size:16px;">Diş Hekimi — Ortodonti Uzmanı</p>
+      <p class="team-page-bio" style="font-size:15px;">Tel ve şeffaf plak tedavisiyle her yaştan hastanın gülüşünü tasarlar. Estetik ve fonksiyonu bir arada sunar.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ── CTA ───────────────────────────────────────────── -->
+<section style="background:linear-gradient(135deg,#E8ECFD 0%,#E8D8C3 100%);padding:80px 32px;text-align:center">
+  <div style="max-width:560px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:20px">
+    <span class="section-label"># RANDEVU</span>
+    <h2 style="font-family:'DM Serif Display',serif;font-size:clamp(26px,3.5vw,40px);color:var(--navy);line-height:1.15">Uzmanlarımızla<br><span style="font-style:italic;color:var(--blue)">tanışmak ister misiniz?</span></h2>
+    <a href="https://wa.me/905335752377" class="btn-cta" target="_blank">Randevu Al <div class="btn-cta-circle">↗</div></a>
+  </div>
+</section>
+
+<!-- ── FOOTER ─────────────────────────────────────────── -->
+<footer id="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-col-brand">
+        <a href="/" class="footer-logo">
+          <div class="footer-logo-icon">🦷</div>
+          <span class="footer-logo-text">MKS</span>
+        </a>
+        <p class="footer-address">Ovacık Mahallesi, 550.cadde,
+            No:9/a Vip Tower Bulvar<br>Keçiören/Ankara</p>
+        <p class="footer-copy-inline">© 2025, <strong>MKS.</strong><br>Tüm Hakları Saklıdır.</p>
+      </div>
+      <div class="footer-col-card">
+        <div class="footer-info-card">
+          <p class="footer-info-desc">Uzman diş hekimliği, kolayca randevu alarak hizmetinizdeyiz.</p>
+          <div class="footer-info-divider"></div>
+          <a href="tel:+905335752377" class="footer-info-phone">0 533 575 23 77</a>
+          <a href="mailto:info@mkspoliklinik.com" class="footer-info-email">info@mkspoliklinik.com</a>
+        </div>
+      </div>
+      <div class="footer-col-links">
+        <p class="footer-col-heading">Hızlı Bağlantılar</p>
+        <div class="footer-links-cols">
+          <div class="footer-links-col">
+            <a href="/" class="footer-link">Ana Sayfa</a>
+            <a href="/hakkimizda" class="footer-link">Hakkımızda</a>
+            <a href="https://wa.me/905335752377" class="footer-link" target="_blank">Randevu Al</a>
+          </div>
+          <div class="footer-links-col">
+            <a href="/tedaviler" class="footer-link">Tedaviler</a>
+            <a href="/ekibimiz" class="footer-link">Ekibimiz</a>
+            <a href="/iletisim" class="footer-link">İletişim</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-col-newsletter">
+        <p class="footer-col-heading">Sosyal Medya</p>
+        <div class="footer-social-row">
+          <a href="https://wa.me/905335752377" class="footer-social-btn footer-social-btn--wa" aria-label="WhatsApp" target="_blank" rel="noopener">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.529 5.854L0 24l6.323-1.496A11.933 11.933 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.014-1.376l-.36-.214-3.732.883.933-3.617-.235-.372A9.818 9.818 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182c5.43 0 9.818 4.388 9.818 9.818 0 5.43-4.388 9.818-9.818 9.818z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/mkspoliklinik" class="footer-social-btn footer-social-btn--ig" aria-label="Instagram" target="_blank" rel="noopener">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/main.js"></script>
+</body>
+</html>
+
+
+
+
+
+
